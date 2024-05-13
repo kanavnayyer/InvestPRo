@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/buySellFragment">
+
+    <fragment
+        android:id="@+id/buySellFragment"
+        android:name="com.awesome.Fragments.BuySellFragment"
+        android:label="fragment_buy_sell"
+        tools:layout="@layout/fragment_buy_sell" >
+        <action
+            android:id="@+id/action_buySellFragment_to_cryptoPRice"
+            app:destination="@id/cryptoPRice" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoPRice"
+        android:name="com.awesome.Fragments.CryptoPRice"
+        android:label="CryptoPRice" >
+        <action
+            android:id="@+id/action_cryptoPRice_to_buySellFragment"
+            app:destination="@id/buySellFragment" />
+    </fragment>
+</navigation>
